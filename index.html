@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Vagas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #resultado {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sorteio de Vagas</h1>
+    
+    <button onclick="realizarSorteio()">Sortear</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function realizarSorteio() {
+            // Número máximo de vagas
+            const numeroMaximoVagas = 447;
+            
+            // Gera um número aleatório entre 1 e 447
+            const numeroSorteado = Math.floor(Math.random() * numeroMaximoVagas) + 1;
+
+            // Exibe o resultado
+            document.getElementById('resultado').innerText = `Sua vaga é a número: ${numeroSorteado}`;
+        }
+    </script>
+
+</body>
+</html>
